@@ -13,6 +13,7 @@ type Experience = {
   iconBg: string;
   date: string;
   points: string[];
+  technologies: string[];
 };
 
 const ExperienceCard: React.FC<{ experience: Experience }> = ({
@@ -29,7 +30,7 @@ const ExperienceCard: React.FC<{ experience: Experience }> = ({
           alt="web-development"
           className="w-16 h-16 object-contain"
         />
-        <div className="flex flex-col">
+        <div className="flex flex-col green-text-gradient">
           <h3 className="text-white text-[24px] font-bold">
             {experience.title}
           </h3>
@@ -55,6 +56,13 @@ const ExperienceCard: React.FC<{ experience: Experience }> = ({
           </li>
         ))}
       </ul>
+      <div className="mt-4 flex flex-wrap gap-2">
+        {experience.technologies.map((technology) => (
+          <p key={`${technology}`} className={`text-[14px] pink-text-gradient`}>
+            #{technology}
+          </p>
+        ))}
+      </div>
     </div>
   </motion.div>
 );

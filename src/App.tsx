@@ -5,7 +5,6 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Certification from "./components/Certification";
-// import TestComponent from "./hoc/SectionWrapper";
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
         <Experience />
         <Education />
         <Certification />
-        {/* <TestComponent /> */}
       </div>
     </BrowserRouter>
   );

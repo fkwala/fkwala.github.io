@@ -1,4 +1,4 @@
-export const textVariant = () => {
+const headingMotion = () => {
     return {
       hidden: {
         y: -50,
@@ -9,80 +9,26 @@ export const textVariant = () => {
         opacity: 1,
         transition: {
           type: "spring",
-          duration: 1.25,
+          duration: 3,
           delay: 0.1,
         },
       },
     };
   };
+
+const fadeIn = () => ({
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+});
   
-  export const fadeIn = (direction: string, type: any, duration: any) => {
-    return {
-      hidden: {
-        x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-        y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
-        opacity: 0,
-      },
-      show: {
-        x: 0,
-        y: 0,
-        opacity: 1,
-        transition: {
-          type: type,
-          delay: 0.1,
-          duration: duration,
-          ease: "easeOut",
-        },
-      },
-    };
-  };
-  
-  export const zoomIn = (delay: any, duration: any) => {
-    return {
-      hidden: {
-        scale: 0,
-        opacity: 0,
-      },
-      show: {
-        scale: 1,
-        opacity: 1,
-        transition: {
-          type: "tween",
-          delay: delay,
-          duration: duration,
-          ease: "easeOut",
-        },
-      },
-    };
-  };
-  
-  export const slideIn = (direction: string, type: any, delay: any, duration: any) => {
-    return {
-      hidden: {
-        x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
-        y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
-      },
-      show: {
-        x: 0,
-        y: 0,
-        transition: {
-          type: type,
-          delay: delay,
-          duration: duration,
-          ease: "easeOut",
-        },
-      },
-    };
-  };
-  
-  export const staggerContainer = (staggerChildren: any, delayChildren: any) => {
-    return {
-      hidden: {},
-      show: {
-        transition: {
-          staggerChildren: staggerChildren,
-          delayChildren: delayChildren || 0,
-        },
-      },
-    };
-  };
+const staggerSections = () => ({
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.5, // Adjust to control stagger timing
+      delayChildren: 0.2,   // Adjust to control initial delay
+    },
+  },
+});
+
+export { headingMotion, fadeIn, staggerSections }

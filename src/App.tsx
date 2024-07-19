@@ -3,7 +3,9 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
-import Contact from "./components/Contact";
+import Education from "./components/Education";
+import Certification from "./components/Certification";
+// import TestComponent from "./hoc/SectionWrapper";
 
 function App() {
   return (
@@ -15,9 +17,9 @@ function App() {
         </div>
         <About />
         <Experience />
-        {/* <div className="relative z-0">
-          <Contact />
-        </div> */}
+        <Education />
+        <Certification />
+        {/* <TestComponent /> */}
       </div>
     </BrowserRouter>
   );

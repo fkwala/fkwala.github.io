@@ -13,22 +13,16 @@ type Cert = {
 };
 
 const CertCard: React.FC<{ cert: Cert }> = ({ cert }) => (
-  <motion.div
-    variants={fadeIn()}
-    className="w-2/5 green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-  >
-    <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly flex-col">
+  <motion.div variants={fadeIn()} className={styles.halfCard}>
+    <div className={styles.cardInternal}>
       <div className="flex items-center space-x-4">
-        <img src={cert.icon} className="w-16 h-16 object-contain" />
+        <img src={cert.icon} className={styles.cardIcon} />
         <div className="flex flex-col">
-          <h3 className="text-white text-[24px] font-bold">{cert.title}</h3>
-          <p
-            className="text-secondary text-[16px] font-semibold"
-            style={{ margin: 0 }}
-          >
+          <h3 className={styles.cardHeadText}>{cert.title}</h3>
+          <p className={styles.cardSubText} style={{ margin: 0 }}>
             {cert.name}
           </p>
-          <p className="text-secondary text-[16px]" style={{ margin: 0 }}>
+          <p className={styles.cardText} style={{ margin: 0 }}>
             Issue Date: {cert.date}
           </p>
         </div>
@@ -39,17 +33,17 @@ const CertCard: React.FC<{ cert: Cert }> = ({ cert }) => (
 
 const Certification = () => {
   return (
-    <>
+    <section>
       <motion.div variants={headingMotion()}>
         <h2 className={styles.sectionHeadText}>Certifications</h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className={styles.cardPadding}>
         {certs.map((cert, index) => (
           <CertCard key={`cert-${index}`} cert={cert} />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

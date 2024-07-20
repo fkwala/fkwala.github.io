@@ -1,15 +1,34 @@
 const styles = {
-    paddingX: "sm:px-16 px-6",
-    paddingY: "sm:py-16 py-6",
-    padding: "sm:px-16 px-6 sm:py-16 py-10",
+  paddingX: "px-16",
+  paddingY: "py-16",
+  padding: "px-16 py-16",
   
     heroHeadText:
-      "font-black text-white lg:text-[55px] sm:text-51px] xs:text-[45px] text-[41px] lg:leading-[65px] mt-2",
+    "font-black text-white text-[45px] mt-2",
     heroSubText:
-      "text-white font-medium lg:text-[20px] sm:text-[16px] xs:text-[10px] text-[6px] lg:leading-[30px]",
+    "text-white font-medium text-[20px]",
   
     sectionHeadText:
-      "text-white font-black md:text-[40px] sm:text-[30px] xs:text-[20px] text-[10px]",
+    "text-white font-black text-[40px]",
+    cardPadding:
+    "mt-4 flex flex-wrap gap-10",
+
+    fullCard:
+    "w-full green-pink-gradient p-[1px] rounded-[20px]",
+    halfCard:
+    "w-2/5 green-pink-gradient p-[1px] rounded-[20px]",
+    cardInternal:
+    "bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly flex-col",
+    cardIcon:
+    "w-16 h-16 object-contain",
+    cardHeadText:
+    "text-white text-[24px] font-bold",
+    cardSubText:
+    "text-white text-[16px] font-semibold",
+    cardText: 
+    "text-white text-[16px]",
+    cardList:
+    "list-disc list-inside pl-5",
   };
   
   export { styles };

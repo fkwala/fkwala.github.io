@@ -9,52 +9,51 @@ type Experience = {
   title: string;
   company_name: string;
   icon: string;
-  iconBg: string;
   date: string;
   points: string[];
-  technologies: string[];
+  tech: Tech[];
+};
+
+type Tech = {
+  name: string;
+  color: string;
 };
 
 const ExperienceCard: React.FC<{ experience: Experience }> = ({
   experience,
 }) => (
-  <motion.div
-    variants={fadeIn()}
-    className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-  >
-    <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly flex-col">
+  <motion.div variants={fadeIn()} className={styles.fullCard}>
+    <div className={styles.cardInternal}>
       <div className="flex items-center space-x-4">
-        <img src={experience.icon} className="w-16 h-16 object-contain" />
+        <img src={experience.icon} className={styles.cardIcon} />
         <div className="flex flex-col">
-          <h3 className="text-white text-[24px] font-bold">
-            {experience.title}
-          </h3>
-          <p
-            className="text-secondary text-[16px] font-semibold"
-            style={{ margin: 0 }}
-          >
+          <h3 className={styles.cardHeadText}>{experience.title}</h3>
+          <p className={styles.cardSubText} style={{ margin: 0 }}>
             {experience.company_name}
           </p>
-          <p className="text-secondary text-[16px]" style={{ margin: 0 }}>
+          <p className={styles.cardText} style={{ margin: 0 }}>
             {experience.date}
           </p>
         </div>
       </div>
-      <ul className="list-disc list-inside pl-5">
+      <ul className={styles.cardList}>
         {experience.points.map((point, index) => (
           <li
             key={index}
-            className="text-secondary text-[16px]"
+            className={styles.cardText}
             style={{ marginTop: "2px" }}
           >
             {point}
           </li>
         ))}
       </ul>
-      <div className="mt-4 flex flex-wrap gap-2">
-        {experience.technologies.map((technology) => (
-          <p key={`${technology}`} className={`text-[16px]`}>
-            #{technology}
+      <div className={styles.cardPadding}>
+        {experience.tech.map((tech) => (
+          <p
+            key={`${name}-${tech.name}`}
+            className={`text-[14px] ${tech.color}`}
+          >
+            #{tech.name}
           </p>
         ))}
       </div>
@@ -64,17 +63,17 @@ const ExperienceCard: React.FC<{ experience: Experience }> = ({
 
 const Experience = () => {
   return (
-    <>
+    <section>
       <motion.div variants={headingMotion()}>
         <h2 className={styles.sectionHeadText}>Work experience</h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className={styles.cardPadding}>
         {experiences.map((experience, index) => (
           <ExperienceCard key={`experience-${index}`} experience={experience} />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

@@ -9,7 +9,7 @@ const headingMotion = () => {
         opacity: 1,
         transition: {
           type: "spring",
-          duration: 3,
+          duration: 0.5,
           delay: 0.1,
         },
       },
@@ -25,8 +25,8 @@ const staggerSections = () => ({
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.5, // Adjust to control stagger timing
-      delayChildren: 0.2,   // Adjust to control initial delay
+      staggerChildren: 0.3, 
+      delayChildren: 0.1,
     },
   },
 });

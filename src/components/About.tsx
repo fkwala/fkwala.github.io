@@ -2,23 +2,26 @@ import React from "react";
 import { styles } from "../styles";
 import { motion } from "framer-motion";
 import { fadeIn, headingMotion } from "../utils/motion";
-import { aboutDescription } from "../constants";
+import { aboutInfo } from "../constants";
 import SectionWrapper from "../hoc/SectionWrapper";
 
 const About = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
-      <div>
+    <section className="flex w-full max-w-5xl items-center justify-between">
+      <div className="w-1/2 text-left">
         <motion.div variants={headingMotion()}>
           <h2 className={styles.sectionHeadText}>About me</h2>
         </motion.div>
         <motion.p
           variants={fadeIn()}
-          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-4 text-white text-[17px] leading-[30px]"
         >
-          {aboutDescription}
+          {aboutInfo.description}
         </motion.p>
       </div>
+      <motion.div className="w-1/2 flex justify-end" variants={fadeIn()}>
+        <img src={aboutInfo.picture} className="w-2/3 h-2/3 object-contain" />
+      </motion.div>
     </section>
   );
 };

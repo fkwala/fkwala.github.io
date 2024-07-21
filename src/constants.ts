@@ -59,7 +59,7 @@ const navLinks = [
 
 const experiences = [
   {
-    title: "Full-stack Developer Intern",
+    title: "Full-stack Software Developer Intern",
     company_name: "Copperleaf Technologies Inc. - Product Suite",
     icon: copperleaf,
     date: "May 2023 - July 2023",
@@ -98,7 +98,7 @@ const experiences = [
     ]
   },
   {
-    title: "Full-stack Developer Intern",
+    title: "Full-stack Software Developer Intern",
     company_name: "Copperleaf Technologies Inc. - Decision Analytics",
     icon: copperleaf,
     date: "May 2022 - December 2022",

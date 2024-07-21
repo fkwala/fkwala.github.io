@@ -43,7 +43,7 @@ const EducationCard: React.FC<{ education: Education }> = ({ education }) => (
         {education.involvements.map((involvement, index) => (
           <li
             key={index}
-            className={styles.cardSubText}
+            className={styles.cardText}
             style={{ marginTop: "2px" }}
           >
             {involvement}

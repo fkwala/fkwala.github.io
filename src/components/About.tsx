@@ -1,4 +1,3 @@
-import React from "react";
 import { styles } from "../styles";
 import { motion } from "framer-motion";
 import { fadeIn, headingMotion } from "../utils/motion";

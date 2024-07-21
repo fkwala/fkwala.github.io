@@ -17,7 +17,7 @@ import {
 const contacts = [
   {
     icon: email,
-    title: "felicia.kwala@gmail.com"
+    title: "feliciak.work@gmail.com"
   },
   {
     icon: linkedin,
@@ -65,7 +65,7 @@ const experiences = [
     date: "May 2023 - July 2023",
     points: [
       "Enhanced Product UX by collaborating with UX designers to create and translate new design mock-ups to Angular web components.", 
-      "Resolved legacy product issues by creating new Angular components and integrating them into existing Angular.js and ASP.NET web pages."],
+      "Resolved legacy product issues by creating new Angular components and integrating them into multiple existing Angular.js and ASP.NET web pages."],
     tech: [
       {
         name: "C#",
@@ -145,7 +145,7 @@ const experiences = [
     date: "May 2022 - Present",
     points: [
       "Mentored neuro-diverse children and youths (ages 8-18) on Java and Python (AI).",
-      "Achieved 80% student retention rate by adopting effective customized 1:1 lesson plans.",],
+      "Achieved high student retention rate by adopting effective customized 1:1 lesson plans.",],
       tech: [
         {
           name: "Java",
@@ -289,7 +289,7 @@ const projects = [
       },
     ],
     image: personal_website,
-    source: "https://github.com/fkwala/personal-website",
+    source: "https://github.com/fkwala",
   },
   {
     name: "Cybersecurity Scripts",
